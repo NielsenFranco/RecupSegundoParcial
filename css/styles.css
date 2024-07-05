@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+}
+.contenedor > *{
+    margin: 0;
+    padding: 8.2%;
+    text-align: center;
+}
+.header{
+    grid-area: header;
+    background-color: black;
+    color: white;
+    padding: 5%;
+}
+.menu{
+    grid-area: menus;
+    background-color: #e63946;
+    color: white;
+    padding: 2%;
+}
+
+.hero{
+    grid-area: hero;
+    background-color: #457b9d;
+    color: white;
+    padding: 20%;
+
+} 
+
+.main{
+    grid-area: main;
+    background-color: #1d3557;
+    color: white;
+    padding: 15%;
+}
+
+.banner{
+    grid-area: banner;
+    background-color: #f4a261;
+    color: black;
+    padding: 10%;
+}
+
+.extra{
+    grid-area: extra;
+    background-color: #2a9d8f;
+    color: black;
+    padding: 10%;
+}
+.image{
+    grid-area: image;
+    background-color: #a8dadc;
+    color: black;
+    padding: 10%;
+}
+.contenedor{ 
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "menus"
+    "hero"
+    "main"
+    "banner"
+    "extra"
+    "image";
+}
+
+/*RESPONSIVE*/
+
+/*Tablet*/
+@media(min-width:768px){
+    .contenedor{
+        max-width: 100%;
+        grid-template-columns: 20% 50% auto;
+        grid-template-areas: 
+        "header header header" 
+        "hero hero hero"
+        "menus main main"
+        "menus banner banner"
+        "menus extra image";
+        text-align: center;
+        padding: auto;
+    }
+    .header{
+        grid-template-areas: header;
+    }
+    .hero{
+        grid-template-areas: hero;
+    }
+    .menu{
+        grid-template-areas: menus;
+    }
+    .main{
+        grid-template-areas: main;
+    }
+    .banner{
+        grid-template-areas: banner;
+    }
+    .extra{
+        grid-template-areas: extra;
+    }
+    .image{
+        grid-template-areas: image;
+    }
+}
+
+/*Desktop*/
+@media(min-width:1024px){
+    .contenedor{
+        max-width: 100%;
+        grid-template-columns: 30% 40% auto;
+        grid-template-rows: 5% auto 15% 15% 10%;
+        grid-template-areas: 
+        "header menus menus"
+        "hero hero hero"
+        "main . image"
+        "main . extra"
+        "banner banner banner";
+        text-align: center;
+        padding: auto;
+    }
+    .header{
+        grid-template-areas: header;
+    }
+    .hero{
+        grid-template-areas: hero;
+    }
+    .menu{
+        grid-template-areas: menus;
+    }
+    .main{
+        grid-template-areas: main;
+    }
+    .banner{
+        grid-template-areas: banner;
+    }
+    .extra{
+        grid-template-areas: extra;
+    }
+    .image{
+        grid-template-areas: image;
+    }
+}
